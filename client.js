@@ -21,8 +21,8 @@ const connect = function () {
         conn.write(`Name: XOR`); //Push name to server
 
         setInterval(() => {
-            conn.write('Move: up'); //Keep moving up!
-        }, 1000)
+            conn.write('Move: up'); //Move up once every 10 seconds
+        }, 2000)
       });
     return conn;
   };
