@@ -20,6 +20,8 @@ const setupInput = (conn) => {
     if (input === 's') connection.write('Move: down');
     if (input === 'd') connection.write('Move: right');
 
+    if (input === 'p') connection.write('Say: READY TO LOSE?');
+
     if (input === '\u0003') process.exit(); //Terminate game via CTRL + C
   };
 

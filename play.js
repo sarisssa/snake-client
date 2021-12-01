@@ -1,10 +1,8 @@
 const connect = require('./client');
 const setupInput = require('./input');
 
-
 console.log("Connecting ...");
 
-let obj = connect();
-console.log(obj)
+let connectObj = connect();
 
-setupInput(obj);
+setupInput(connectObj); //Passed object returned from connect() into setupInput()
