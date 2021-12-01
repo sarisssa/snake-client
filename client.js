@@ -1,7 +1,5 @@
 const net = require('net');
 
-// establishes a connection with the game server
-
 const connect = function () {
     const conn = net.createConnection({
       host: '10.0.2.15',
@@ -21,7 +19,7 @@ const connect = function () {
         conn.write(`Name: XOR`); //Push name to server
 
         setInterval(() => {
-            conn.write('Move: up'); //Move up once every 10 seconds
+            conn.write('Move: up'); //Move up once every 2 seconds
         }, 2000)
       });
     return conn;
