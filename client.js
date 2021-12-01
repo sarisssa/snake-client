@@ -17,10 +17,6 @@ const connect = function () {
         console.log("Successfully connected to game server.");
 
         conn.write(`Name: XOR`); //Push name to server
-
-        setInterval(() => {
-            conn.write('Move: up'); //Move up once every 2 seconds
-        }, 2000)
       });
     return conn;
   };
