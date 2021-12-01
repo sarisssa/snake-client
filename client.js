@@ -8,7 +8,6 @@ const connect = function () {
       port: 50541
     });
   
-    // interpret incoming data as text
     conn.setEncoding("utf8");
   
     conn.on("data", (message) => {
@@ -16,12 +15,19 @@ const connect = function () {
     });
 
     conn.on("connect", () => {
+
         console.log("Successfully connected to game server.");
 
-        conn.write(`Name: XOR`);
+        conn.write(`Name: XOR`); //Push name to server
+
+        setInterval(() => {
+            conn.write('Move: up'); //Keep moving up!
+        }, 1000)
       });
-  
     return conn;
   };
 
   module.exports = connect;
+
+
+  
